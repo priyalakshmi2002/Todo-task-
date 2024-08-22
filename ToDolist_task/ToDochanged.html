@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking of CSS file -->
+    <link rel="stylesheet" href="CSS/todochanged.css">
+    <!-- Icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>to do webpage</title>
+</head>
+<body>
+    <!--To create a container for the todo list -->
+    <div id="todo-container">
+      <!-- todo list header -->
+      <div id="header">
+        <h4>To-Do List</h4>
+      </div>
+
+      <!-- create input field -->
+      <div id="todo-form">
+       <form id="inputform">
+        <input type="text" class="input-item" name="input_box" id="input-box" placeholder="Enter Task"/>
+        <!-- add task button -->
+        <button id="add-task-btn" onclick="addTask()">Add</button>
+       </form>
+        <!-- Display errror message for invalid task -->
+        <div id="error-message" class="error-message hidden">
+          <p>Please enter a task</p>
+        </div>
+        <!-- Dropdown for all,assigned,completed -->
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="assigned">Assigned</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>  
+     </div>
+     
+     <!-- Task list container -->
+     <div class="taskcontainer">
+        <!-- List of tasks -->
+        <ul id="list-container"></ul>
+        <!-- Default message for empty list -->
+        <p id="message">Write it down, Get it done!</p>
+     </div>
+     
+     <!--clear button  -->
+     <div class="clearbtn">
+        <button id="clrbtn">Clear</button>
+     </div>
+
+     <!-- horizontal line above counter -->
+<hr />
+<!-- task list counter -->
+<div class="counter-container">
+  <div id="task-counters">
+    Completed: <span id="completed-counter">0</span> | Assigned:
+    <span id="assigned-counter">0</span>
+  </div>
+</div>
+    </div>
+  <!-- JS file link -->
+  <script src="todolistchanged.js"></script>
+  <div class="back">
+    <a href="home.html">
+      <button class="b">Back</button>
+    </a>
+  </div>
+</body>
+</html>

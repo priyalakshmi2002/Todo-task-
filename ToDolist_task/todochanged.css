@@ -1,0 +1,443 @@
+/* style for html page */
+html{
+    padding:0%;
+    margin:0%;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+}
+/* style for body */
+body { 
+    background: linear-gradient(to bottom,#148F77 ,#1ABC9C,#1A5276);
+    text-align: center;
+    margin-top: 5%;
+    width:40%;
+    height:80%;
+}
+/* style for todo-container */
+#todo-container {
+    background-color: rgb(232, 248, 245,0.8);
+    width: 100%; /* Set width to 100% to fit within its parent container */
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 15px;
+    height: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+/* Updated style for hiding tasks */
+li.hidden {
+    display: none;
+}
+
+/* style for header */
+#header {
+    margin: 2%;
+    text-align: center;
+}
+/* style for h4*/
+h4 {
+    margin:0%;
+    padding:0%;
+    color:#212F3D ; 
+}
+/*style for input field */
+#input-box {
+    width:46%;
+    padding:1%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size:53%;
+}
+/*style for add button */
+#add-task-btn {
+    width:9%;
+    font-size:46%;
+    cursor: pointer;
+    transition: 0.4s;
+    padding:1.5%;
+    border: none;
+    border-radius: 5px;
+    background-color:#148F77;
+    color:white;
+}
+  /*style for hover of add button  */
+#add-task-btn:hover {
+    background-color: #1A5276; 
+}
+
+/* Style for error message */
+#error-message {
+    margin: 10px 0;
+    visibility: hidden; /* Initially hide the error message */
+    font-size: 14px;
+}
+
+/* error message visibility */
+#error-message.visible {
+    visibility: visible; /* Show the error message when it has the .visible class */
+    margin-top: 5px; /* Adjust spacing from the input box */
+    margin-bottom: 5px; /* Adjust spacing from the dropdown */
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+/* style for drop down */
+select{
+    margin-top:5%;
+    outline:none;
+    border:2px solid;
+    width:66%;
+    cursor:pointer;
+    padding:1.2%;
+    border-radius:5px;
+    color:#148F77;
+}
+.select{
+    margin-top:auto;
+    margin-left:28%;
+    position:relative;
+    overflow:hidden;
+    border-radius:5%;
+    width:46%;
+    font-size:86%;
+    color:#148F77;
+}
+/* style for filters all,assigned and completed */
+.filter-todo{
+    font-size:60%;
+    font-weight:bold;
+}
+
+/* style for task container */
+.taskcontainer{
+    width:100%;
+    height:45%;
+    overflow-y: auto;
+}
+/* style for list */
+ul {
+    list-style: none;
+    padding: 1%;
+    margin-top:3%;
+    text-align:left;
+    align-items: center;  
+}
+  /*style for one particular list  */
+li {
+  border-radius: 5px;
+  margin-bottom:1%;
+  margin-top:1%;
+  font-size:50%;
+  width:80%;
+  margin-left:9%;
+  list-style-type:none;
+  align-items:center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  background-color: #D1F2EB ;
+}
+/* style for label containing checkbox and task name */
+.taskname{
+    width:70%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    align-items:center;
+    margin:2%;
+}
+/* style for edit and delete button */
+.edit-btn, .delete-btn,.done-btn {
+    float: right;
+    color:rgb(111, 0, 255);
+    text-align:center;
+    cursor: pointer;
+    margin: 0% 2%;
+    border-radius:5px;
+    padding:1% 2%;
+    width:10%;
+} 
+.done-btn{
+    color:rgb(22, 175, 111);
+}
+/* delete button color */
+.delete-btn{
+    color:rgb(138, 9, 9);
+}
+/* style for hover of edit and delete button */
+.edit-btn:hover{
+    color:#148F77;
+}
+.delete-btn:hover{
+    color:#148F77;
+}
+.done-btn:hover{
+    color:rgb(22, 175, 111);
+}
+/* style for message display */
+#message{
+    font-size:70%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+/* style for clear button div */
+.clearbtn{
+    width:100%;
+    height:10%;
+}
+/* style for clear button */
+#clrbtn {
+    width: 11%;
+    height: 60%;
+    font-size:47%;
+    text-align: center;
+    background-color:#148F77;
+    color:white;
+    border:none;
+    border-radius:10%;
+}
+/* style for hover of clear button */
+#clrbtn:hover{
+    background-color:#1A5276; 
+}
+/* style for completed */
+.completed {
+    color: gray;
+    border: 1px solid gray;
+}
+/* style for horizontal line */
+hr{
+    width:100%;
+}
+/* style for counters */
+.counter-container{
+    font-size:53%;
+}
+/* style for back button */
+.back{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:5%;
+}
+.b{
+    color:white;
+    background-color: #148F77;
+    border:none;
+    width:141%;
+    font-size:20px;
+    cursor: pointer;
+    transition: 0.4s;
+    padding:3%;
+    border: none;
+    border-radius: 5px;
+    background-color:#148F77;
+    color:white;
+}
+.b:hover{
+    background-color: gray;
+}
+/* media query for large desktop screens */
+@media (max-width:2560px){
+    h4{
+        font-size:240%;
+    }
+    #input-box{
+        width:67%;
+        font-size:170%;
+    }
+    #add-task-btn{
+        font-size:156%;
+    }
+    #error-message{
+        font-size:160%;
+    }
+    .select{
+        font-size:117%;
+    }
+    .filter-todo{
+        font-size:106%;
+    }
+    li{
+        font-size:190%;
+    }
+    .edit-btn,.delete-btn,.done-btn{
+        margin:-1% 2%;
+    }
+    #message{
+        font-size:160%;
+    }
+    #clrbtn{
+        font-size:146%;
+
+    }
+    .counter-container{
+        font-size:144%;
+    }
+    .b{
+        font-size:25px;
+    }
+
+}
+
+/* media query for laptops */
+@media(max-width:1660px){
+    h4{
+        font-size:155%;
+    }
+    #input-box{
+        font-size:100%;
+    }
+    #add-task-btn{
+        font-size:100%;
+    }
+    #message{
+        font-size:100%;
+    }
+    .filter-todo{
+        font-size:100%;
+    }
+    li{
+        font-size:100%;
+    }
+    .edit-btn,.delete-btn,.done-btn{
+        margin:-1% 2%;
+    }
+    #clrbtn{
+        font-size:100%;
+    }
+    .counter-container{
+        font-size:140%;
+    }
+
+
+}
+
+@media (max-width:1440px){
+    h4{
+        font-size:166%;
+    }
+    #input-box{
+        font-size:88%;
+    }
+    #add-task-btn{
+        font-size:82%;
+    }
+    #error-message{
+        font-size:77%;
+    }
+    .select{
+        font-size: 107%;
+        width:47%;
+    }
+    li{
+        font-size:120%;
+    }
+    .edit-btn,.delete-btn,.done-btn{
+        margin:-1% 2%;
+        width:6%;
+    }
+    #message{
+        font-size:100%;
+    }
+    #clrbtn{
+        font-size: 82%;
+    }
+    .counter-container{
+        font-size:92%;
+    }
+}
+/* media query for tablet */
+@media (min-width:501px) and (max-width:769px){
+    h4{
+        font-size:130%;
+    }
+    #input-box{
+        font-size:91%;
+        width:56%;
+    }
+    #add-task-btn{
+        font-size:85%;
+        width:12%;
+    }
+    #error-message{
+        font-size:74%;
+    }
+    .select{
+        font-size:91%;
+        width:58%;
+        margin-left:21%;
+    }
+    select{
+        width:66%;
+    }
+    li{
+        font-size:117%;
+    }
+    .edit-btn,.delete-btn,.done-btn{
+        margin:-1% 2%;
+    }
+    #message{
+        font-size: 95%;
+    }
+    #clrbtn{
+        font-size: 77%;
+        width:auto;
+    }
+    .counter-container{
+        font-size:90%;
+    }
+}
+/* media query for mobile */
+
+@media (max-width:500px){
+    body{
+        width:76%;
+    }
+    h4{
+        font-size:145%;
+    }
+    #input-box{
+        font-size:93%;
+        width:58%;
+    }
+    #add-task-btn{
+        font-size:84%;
+        width:19%;
+    }
+
+    #error-message{
+        font-size:80%;
+    }
+    .select{
+        font-size: 68%;
+        width:62%;
+        margin-left:20%;
+    }
+    select{
+        width:58%;
+    }
+    .filter-todo{
+        font-size:97%;
+    }
+    li{
+        font-size:106%;
+        width:90%;
+        margin-left:6%;
+    }
+    #message{
+        font-size: 81%;
+    }
+    #clrbtn{
+        width:26%;
+        font-size: 87%;
+    }
+    .counter-container{
+        font-size:84%;
+    }
+}
